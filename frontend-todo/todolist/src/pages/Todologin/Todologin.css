@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Inter', sans-serif;
+    background: linear-gradient(rgba(114, 47, 55, 0.9), rgba(0, 0, 0, 0.9)), 
+              url('../../assets/bg2.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255); /* White background with 80% opacity */
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(8px); /* Optional: Adds a blurred effect behind the box */
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .header-icon {
+    width: 30px; /* Adjust the size of the icon */
+    height: 30px;
+    margin-right: 5px; /* Spacing between icon and heading */
+  }
+  .login-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+
+  }
+  
+  .login-subtitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: -15px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+     
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #1F456E;
+    box-shadow: 0px 0px 4px rgba(31, 69, 110, 0.5);
+  }
+  
+  .login-button {
+    background-color: #1F456E;
+    color: white;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 105%;
+  }
+  
+  .login-button:hover {
+    background-color: #802539;
+  }
+  
+  .register-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  

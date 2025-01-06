@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  'Inter', sans-serif;
+  background: linear-gradient(
+      rgba(114, 47, 55, 0.9),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('../../assets/bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  
+}
+
+.todo-box {
+  background:rgb(255, 241, 241);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  width: 400px;
+  max-height: 80vh;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.todo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #1f456e;
+  box-shadow: 0px 0px 4px rgba(31, 69, 110, 0.5);
+}
+
+.add-button {
+  padding: 0.7rem 1.2rem;
+  background-color: #1f456e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #802539;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: calc(80vh - 200px); /* Adjust based on header and input box height */
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  white-space: normal; /* Allow text to wrap within the box */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  overflow-wrap: break-word; /* Ensures long words wrap */
+  word-wrap: break-word;    /* Legacy support for IE */
+  word-break: break-word;   /* Breaks long words onto new lines */
+  transition: transform 0.2s ease;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.task-item:hover {
+  color: darkred;
+}
+
+.task-content.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: darkred;
+}
+
+.circle {
+  width: 20px; /* Fixed size for circle */
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #1f456e;
+  background-color: white;
+  position: absolute; /* Allows precise positioning */
+  left: 10px; /* Distance from the left edge of the task item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle.completed {
+  background-color: #1f456e; /* Fills the circle when the task is completed */
+}
+
+.tick-mark {
+  color: white;
+  font-size: 14px; /* Adjust tick mark size */
+  visibility: hidden; /* Initially hidden */
+}
+
+.circle.completed .tick-mark {
+  visibility: visible; /* Show tick mark when completed */
+}
+
+/* Adjust the task text to accommodate the circle */
+.task-content {
+  flex: 1;
+  margin-left: 40px; /* Space to account for the circle */
+  text-align: left;
+  overflow-wrap: break-word; /* Ensure words break */
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal; /* Ensure text wraps */
+}
+
+/* Add this CSS for the logout button */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1f456e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #FBCEB1;
+  color:black;
+}
+.date-input {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.task-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 15px;
+  display: inline-block;
+}
